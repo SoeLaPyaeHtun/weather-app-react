@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card";
+import Search from "./components/Search";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full min-vh-100 d-flex justify-content-center align-items-center flex-column">
+      <h1 className="text-dark fw-bold text-uppercase my-3">
+        Weather Forcast
+      </h1>
+    <div className="shadow-lg bg-light d-flex gap-4 flex-column align-items-center py-5 rounded" style={
+      {
+        'minWidth': '500px',
+      }
+    }>
+      <Search />
+      <Card />
+    </div>
     </div>
   );
 }
